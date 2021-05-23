@@ -1,0 +1,49 @@
+1. git --version
+2. git config --global user.name <name>
+3. git config --global user.email <email>
+4. git config --list
+5. git help <command> or git <command> --help
+6. git add <filename> will add the file to staging area
+7. git add -A will add all the files to the staging area
+8. git status will give the status of all files
+9. git reset <filename> will remove the file from staging area
+10. git reset will remove all the files from staging area
+11. git commit -m "message"
+12. git clone url directory or git clone url . : 
+    . will clone the repository into the current directory
+13. git remote -v : location
+14. git branch -a : lists all the branches
+15. git diff will give all the changes made to the files
+16. git pull origin master : pull request
+17. git branch <branchname> : create branch
+18. git checkout <branchname> : switch between branches
+Merging of branches steps:
+    git merge <brahcname> : merge the branch to the current branch(This will have the merge done locally)
+    git push origin <branchname> : This is make changes to the remote branch 
+19. git submodule add <remote_url> <destination_folder> : To add subrepository to a repository
+20. git branch -d localBranchName : delete locally
+21. git push origin --delete remoteBranchName : delete remote
+22. git tag -a "tag name" -m "message"
+22. git tag -d "tag name"
+23. git push orign --delete "tagname"
+24. git checkout -b <branchname> <tagename>
+25. git submodule add <url> : This is to add a repository in an already present repository
+26. git stash save "message" : used to stash the files
+27. git stash list : lists all the stash's
+28. git stash apply <stash_code from git stash list>
+29. git stash pop : is same as above
+30. git stash drop <stash_cdoe> : deletes the stash
+31. git stash clear : deletes all the stash's
+32 git lo : gives all the logs
+33 git cherry-pick <log hashcode> : This will commit that into our repository
+34 git cherry-pick <log hashcode> -n : This will all that commit to the staging area not commit those cherry picks
+
+
+
+how to add subrepository to repository
+gitrevert
+cherrypick//check
+git stash
+forcepush
+fork - detail
+
