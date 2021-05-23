@@ -1,0 +1,50 @@
+1. grep -i "pattern" filename
+  grep is used to check for pattern matching from the files
+  This is used to check for patterns in the file filename where -i suggests that
+  the pattern can be case insensitive 
+2. grep -c "pattern" filename
+   -c is used to check the line at which the pattern is matching
+3. grep -l "pattern" * || grep -l "pattern" f1.txt f2.txt f3.txt f4.txt
+   The above command we can get all the files in the directory have the pattern
+4. grep -w "pattern" filename
+    By default, grep matches the given string/pattern even if it found as a substring in a file.
+     The -w option to grep makes it match only the whole words. 
+5. grep -o "pattern" filename
+6. sed 's/target/changeto/g' filename
+   sed is used to replace the words in the file
+   Here the “s” specifies the substitution operation.
+    The “/” are delimiters. The “target” is the search pattern and the “changeto” is the replacement string.
+7. sed 's/unix/linux/2' filename
+   Use the /1, /2 etc flags to replace the first, second occurrence of a pattern in a line.
+   The above command replaces the second occurrence of the word “unix” with “linux” in a line.
+8. sed 's/unix/linux/3g' filename
+   Use the combination of /1, /2 etc and /g to replace all the patterns from the nth occurrence of a pattern in a line.
+   The following sed command replaces the third, fourth, fifth… “unix” word with “linux” word in a line.
+9. sed '3 s/unix/linux/' filename
+   The above command is use to restrict the sed command to replace the string on a specific line number
+10. sed 's/target/changeto/p' filename
+   The /p print flag prints the replaced line twice on the terminal.
+    If a line does not have the search pattern and is not replaced, then the /p prints that line only once.
+11. cut
+   The cut command in UNIX is a command for cutting out the sections from each line of files and writing the result to standard output.
+   It can be used to cut parts of a line by byte position, character and field.
+12. Syntax : cut OPTION... [FILE]...
+13. cut -b -n filename : indicates cutting the first n bytes.
+    cut -b n- filename : indicates cutting the last n bytes.
+14. cut -c -n1 n2 n3 filename : indicates cutting n1,n2 and n3 charactesrs from the file 
+15. cut -d "delimiter" -f (field number) filename : d is the delimiter and f is the field number
+16. cut --complement -d " " -f 1 filename : As the name suggests it complement the output.
+    This option can be used in the combination with other options either with -f or with -c.
+17. cut -d " " -f 1,2 state.txt --output-delimiter='%'
+    –output-delimiter: By default the output delimiter is same as input delimiter that we specify in the cut with -d option. 
+    To change the output delimiter use the option –output-delimiter=”delimiter”.
+18. Piping(|) : In Linux, the pipe command lets you sends the output of one command to another. 
+                Piping, as the term suggests, can redirect the standard output, 
+                input, or error of one process to another for further processing
+19. head : 
+         head -n filename : first n lines from the file
+         head -c filename : first n charactesrs from the file
+         head -v filename : The data will be in the sorted order
+20. nohup command is used to keep a process running even after the terminal is closed.
+21. sort is used to sort the sort the content of the file
+     sort , sort -r here -r means reverse the sorted the content
